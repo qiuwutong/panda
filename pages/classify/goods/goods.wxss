@@ -1,0 +1,32 @@
+/* pages/classify/classify/goods.wxss */
+/*顶部导航样式  开始  */
+@import "../../../template/wxss/goods.wxss";
+.content{
+    background: #fff;
+}
+.top_nav {
+    height: 66rpx;
+    /* border-bottom: 4rpx solid #dcdcdc; */
+    border-top: 4rpx solid #dcdcdc;
+    white-space: nowrap;
+    width: 95%;
+    margin: 0 auto;
+    /* line-height: 66rpx; */
+}
+.top_nav view {
+    display: inline-block;
+    padding: 0 40rpx;
+    font-size: 28rpx;
+    padding-bottom: 14rpx;
+    border-bottom: 4rpx  solid #dcdcdc;
+}
+.top_nav .active{
+    border-bottom: 4rpx  solid #81d6aa;
+}
+.top_nav view:nth-of-type(1){
+    padding-left: 20rpx;
+}
+/*顶部导航样式  结束 */
+.content .info{
+    padding-left: 38rpx;
+}

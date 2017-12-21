@@ -1,0 +1,60 @@
+<!--pages/order/order.wxml-->
+<view class='content'>
+    <!--头部导航栏  -->
+    <view class='nav'>
+        <ul>
+            <li class="{{active == 1?'active':''}}"  bindtap="navtap"  data-index="1">全部</li>
+            <li class="{{active == 2?'active':''}}" bindtap="navtap" data-index="2">待付款</li>
+            <li class="{{active == 3?'active':''}}" bindtap="navtap" data-index="3">代发货</li>
+            <li class="{{active == 4?'active':''}}" bindtap="navtap" data-index="4">待收货</li>
+        </ul>
+    </view>
+    <!--订单内容  -->
+    <view class='info'>
+        <!--订单列表  -->
+        <ul class="order_list">
+            <block wx:for="{{orderList}}" wx:key="{{idnex}}">
+                <li class="list" style="{{item.txtStyle}}">
+                    <view class='layout'  bindtouchstart="touchstart" bindtouchmove="touchmove" bindtouchend="touchend" data-index="{{index}}" data-code='{{item.code}}'>
+                        <!--单条订单头部  -->
+                        <view class='list_top'>
+                            <text class='time'>{{item.time}}</text>
+                            <text class='state'>{{item.state}}</text>
+                        </view>
+                        <!--单条订单内容  -->
+                        <ul class="list_content">
+                            <li>
+                                <image src='../../images/Figure4.png' class='img'></image>
+                            </li>
+                            <li class="list_content_right">
+                                <view class='right_top'>
+                                    {{item.content}}
+                                </view>
+                                <view class='right_bot'>
+                                    <text>款式：{{item.sel}}，{{item.color}}</text>
+                                    <text>x{{item.num}}</text>
+                                </view>
+                            </li>
+                        </ul>
+                        <!-- 单条订单底部 -->
+                        <ul class="{{item.code == 5|| item.code == 4?'foot':'list_foot'}}">
+                            <li>共{{item.num}}件商品，小计：
+                                <text class='color'>￥{{item.price}}</text>（含运费￥
+                                <text>{{item.yunfei}}</text>）
+                            </li>
+                            <li class="btn" wx:if="{{item.code == 1|| item.code == 2}}">
+                                <view class='cancel'  bindtap='cancelTap'>取消订单</view>
+                                <view class='buyNow' wx:if="{{item.code == 1}}">立即付款</view>
+                            </li>
+                            <li class="btn" wx:elif="{{item.code == 3}}">
+                                <view class='cancel' bindtap='expressTap'>查看物流</view>
+                                <view class='buyNow' bindtap='confirmTap'>确认收货</view>
+                            </li>
+                        </ul>
+                    </view>
+                    <view wx:if="{{item.code == 5|| item.code == 4}}" class='remove'>删除</view>
+                </li>
+            </block>
+        </ul>
+    </view>
+</view>

@@ -1,0 +1,61 @@
+<!--pages/buy/buy.wxml-->
+
+<view class='content'>
+    <view class='address' wx:if="{{address}}">
+        <block wx:for="{{address}}" wx:key="{{index}}">
+            <view class='address_left'>
+                <text>{{item.name}}</text>
+                <text>{{item.add}}</text>
+            </view>
+            <view class='address_pone'>
+                <text>{{item.phone}}</text>
+            </view>
+            <view class='center'   bindtap='addressTap'>
+                <text class='iconfont icon-gengduo1'></text>
+            </view>
+        </block>
+    </view>
+    <view class='buy_top' wx:else>
+        <view class='top_left'>
+            <text class='iconfont icon-dizhiguanli'></text>
+            <text>点击填写我的收货地址</text>
+        </view>
+        <view class='iconfont icon-gengduo1' bindtap='addressTap'></view>
+    </view>
+    <!--购买商品详情  -->
+    <view class='info'>
+        <!--商品  -->
+        <block wx:for="{{goods}}" wx:key="{{index}}">
+            <view class='selectList'>
+                <!--商品图片-  -->
+                <view class='img'>
+                    <image src='{{item.image}}'></image>
+                </view>
+                <!--商品详情  -->
+                <view class='goods_info'>
+                    <view class='goods_title'>{{item.content}}</view>
+                    <view class='sel'>款式：
+                        <text>{{item.sel}}，</text>
+                        <text>{{item.color}}</text>
+                    </view>
+                    <view class='bottom'>
+                        <!--商品数量选择  -->
+                        <text class='price'>￥{{item.Price}}</text>
+                        <text class='num'>X{{item.num}}</text>
+                    </view>
+                </view>
+            </view>
+        </block>
+    </view>
+
+    <view class='foot'>
+        <view class='foot_left'>
+            <text>合计：</text>
+            <text class='total color'>3210.80</text>
+            <text class='yunfei'>（含运费:￥10.00）</text>
+        </view>
+        <view>
+            <button class='btn'  bindtap='btnTap'>提交订单</button>
+        </view>
+    </view>
+</view>

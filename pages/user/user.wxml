@@ -1,0 +1,58 @@
+<!--pages/user/user.wxml-->
+<view class='content'>
+    <view class='top  center'>
+        <view>
+            <image class='img' src='{{avatarUrl}}'></image>
+        </view>
+        <view class='name'>{{nickName}}</view>
+    </view>
+    <view class='lists'>
+        <ul class='lists_ul'>
+            <li class='lists_li' bindtap='orderTap'>
+                <view class='box'>
+                    <view class='left'>
+                        <text class='iconfont icon-shangchengicon13'></text>
+                        <text>我的订单</text>
+                    </view>
+                    <text class='iconfont icon-gengduo1'></text>
+                </view>
+            </li>
+            <li class='lists_li' bindtap='addressTap'>
+                <view class='box'>
+                    <view class='left'>
+                        <text class='iconfont icon-dizhiguanli'></text>
+                        <text>地址管理</text>
+                    </view>
+                    <text class='iconfont icon-gengduo1' ></text>
+                </view>
+            </li>
+            <li class='lists_li' bindtap='shoucangTap'>
+                <view class='box'>
+                    <view class='left'>
+                        <text class='iconfont icon-wenjian'></text>
+                        <text>我的收藏</text>
+                    </view>
+                    <text class='iconfont icon-gengduo1'></text>
+                </view>
+            </li>
+            <li class='lists_li'  bindtap="questionTap">
+                <view class='box'>
+                    <view class='left'>
+                        <text class='iconfont icon-wenti'></text>
+                        <text>常见问题</text>
+                    </view>
+                    <text class='iconfont icon-gengduo1'></text>
+                </view>
+            </li>
+            <li class='lists_li'  bindtap="aboutTap">
+                <view class='box'>
+                    <view class='left'>
+                        <text class='iconfont icon-guanyuwomen'></text>
+                        <text>关于我们</text>
+                    </view>
+                    <text class='iconfont icon-gengduo1'></text>
+                </view>
+            </li>
+        </ul>
+    </view>
+</view>

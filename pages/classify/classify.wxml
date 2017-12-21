@@ -1,0 +1,64 @@
+<!--pages/classify/classify.wxml-->
+<view class='content'>
+    <ul class="nav">
+        <block wx:for="{{navs}}" wx:key="index">
+            <li class="{{id == index?'active':''}}" bindtap="navtap" data-id="{{item.navId}}">{{item.name}}</li>
+        </block>
+    </ul>
+    <view class='info'>
+        <view class='banner'>
+            <image src='../../images/Figure2.png'></image>
+        </view>
+        <view class='hot'>
+            <view>热门分类</view>
+            <ul class='hot_ul'>
+                <li>
+                    <image src='../../images/spppp@2x.png'></image>
+                    <text>安全座椅</text>
+                </li>
+                <li>
+                    <image src='../../images/spppp@2x.png'></image>
+                    <text>儿童旅行包</text>
+                </li>
+                <li>
+                    <image src='../../images/spppp@2x.png'></image>
+                    <text>安全座椅</text>
+                </li>
+                <li>
+                    <image src='../../images/spppp@2x.png'></image>
+                    <text>儿童旅行包</text>
+                </li>
+                <li>
+                    <image src='../../images/spppp@2x.png'></image>
+                    <text>安全座椅</text>
+                </li>
+            </ul>
+        </view>
+
+        <view class='hot'>
+            <view>热门分类</view>
+            <ul class='hot_ul'>
+                <li>
+                    <image src='../../images/spppp@2x.png'></image>
+                    <text>安全座椅</text>
+                </li>
+                <li>
+                    <image src='../../images/spppp@2x.png'></image>
+                    <text>儿童旅行包</text>
+                </li>
+                <li>
+                    <image src='../../images/spppp@2x.png'></image>
+                    <text>安全座椅</text>
+                </li>
+                <li>
+                    <image src='../../images/spppp@2x.png'></image>
+                    <text>儿童旅行包</text>
+                </li>
+                <li>
+                    <image src='../../images/spppp@2x.png'></image>
+                    <text>安全座椅</text>
+                </li>
+            </ul>
+        </view>
+    </view>
+</view>

@@ -1,0 +1,78 @@
+/* pages/classify/classify.wxss */
+
+page {
+    font-size: 28rpx;
+    color: 212121;
+    font-weight: 400;
+    height: 100%;
+}
+
+.content {
+    border-top: 1px solid #969696;
+    height: 100%;
+    display: flex;
+}
+
+/*左侧导航样式  开始  */
+
+.content  .nav {
+    display: flex;
+    flex-direction: column;
+    background: #f6f6f6;
+    width: 190rpx;
+    height: 100%;
+}
+
+.content  .nav li {
+    height: 102rpx;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/*点击样式  */
+
+.content  .nav .active {
+    box-sizing: border-box;
+    background: #fff;
+    color: #81d6aa;
+    border-left: 4rpx solid #81d6aa;
+}
+
+/*左侧导航样式  结束  */
+
+/*右侧内容样式  */
+
+.content .info {
+    padding: 28rpx 20rpx 0 20rpx;
+    background: #fff;
+}
+
+.content .info .banner image {
+    width: 520rpx;
+    height: 192rpx;
+}
+
+/*分类样式  */
+.content .info .hot >view{
+    margin-bottom:26rpx;
+}
+.content .info .hot .hot_ul {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.content .info .hot .hot_ul li {
+    width: 33%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 22rpx;
+}
+
+.content .info .hot image {
+    width: 125rpx;
+    height: 125rpx;
+}
+
+/*右侧内容样式  */

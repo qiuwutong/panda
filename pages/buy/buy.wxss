@@ -1,0 +1,130 @@
+/* pages/buy/buy.wxss */
+
+page {
+    font-size: 28rpx;
+    color: #212121;
+}
+/*顶部地址信息  */
+.address{
+    border-top:1px solid #969696; 
+    background: #fff;
+    height: 120rpx;
+    display: flex;
+    padding-left: 20rpx;
+    justify-content: space-between;
+}
+.icon-gengduo1{
+    padding: 16rpx;
+}
+.address .address_left{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.address .address_pone{
+    padding-top: 26rpx;
+}
+
+/*没有地址信息样式  */
+.buy_top {
+    background: #fff;
+    border-top: 1px solid #969696;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 97rpx;
+    padding: 0 20rpx;
+}
+
+.buy_top .top_left .iconfont {
+    margin-right: 20rpx;
+    font-size: 36rpx;
+    color: #212121;
+    font-weight: 600;
+}
+
+.buy_top .icon-gengduo1 {
+    font-size: 36rpx;
+    font-weight: 900;
+    color: #969696;
+}
+
+/*商品列表样式   开始 */
+
+.info {
+    margin-top: 20rpx;
+    background: #fff;
+}
+
+.icon-down-trangle {
+    margin-left: 16rpx;
+}
+
+.info .selectList {
+    width: 100%;
+    padding: 0 20rpx;
+    height: 286rpx;
+    border-top: 1rpx solid #f1f1f1;
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.info .selectList .img {
+    width: 27%;
+    margin: 0 3%;
+}
+
+.info .selectList .img image {
+    width: 100%;
+    height: 190rpx;
+}
+
+/*商品款式  */
+
+.info .goods_info .sel {
+    margin: 24rpx 0;
+    color: #969696;
+}
+
+/*商品底部 */
+
+.info .goods_info .bottom {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+.info .goods_info .bottom .num{
+    color: #969696;
+    font-size: 24rpx;
+}
+.price {
+    color: #81d6aa;
+    font-size: 32rpx;
+}
+
+/*确定订单底部  */
+.foot{
+    margin-top: 160rpx;
+    background: #fff;
+    height: 102rpx;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.foot .foot_left{
+    padding-left: 40rpx;
+}
+.foot .btn{
+    width: 208rpx;
+    height: 102rpx;
+    border: none;
+    background: #81d6aa;
+    color: #fff;
+    border-radius: 0;
+}
+
+.foot .foot_left .yunfei{
+    color: #969696;
+}

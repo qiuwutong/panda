@@ -1,0 +1,19 @@
+<!--pages/user/shoucang/shoucang.wxml-->
+<import src="../../../template/wxml/goods.wxml" />
+<view class='content'>
+    <view class='content_info'  wx:if="{{goods}}">
+        <!--商品          -->
+        <view class='info'>
+            <template is="tel_goods" data="{{...goods}}"></template>
+        </view>
+    </view>
+    <view wx:else>
+        <ul class="none">
+            <li class="iconfont icon-xin"></li>
+            <li class="title">您还没有任何收藏呢~</li>
+            <li class='btn color'>
+                去逛逛
+            </li>
+        </ul>
+    </view>
+</view>

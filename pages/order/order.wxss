@@ -1,0 +1,115 @@
+/* pages/order/order.wxss */
+.content{
+    font-size: 28rpx;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+/*我的订单顶部导航样式  */
+.content .nav{
+    font-size: 32rpx;
+    background: #fff;
+    border-top: 1rpx solid #f1f1f1;
+    height: 90rpx;
+    line-height: 90rpx;
+    padding: 0 20rpx;
+}
+.content .nav ul {
+     display: flex;
+    justify-content: space-between;
+}
+.content .nav ul li {
+    padding: 0 10rpx;
+}
+.content .nav .active{
+    border-bottom: 1px solid #81d6aa;
+}
+/*我的订单  单条订单样式  */
+/* 单条订单  头部  样式 */
+.content .info .order_list .list{
+    background: #fff;
+    display: block;
+    margin-top: 20rpx;
+    position: relative;
+}
+.content .info .order_list .list .list_top{
+        height: 88rpx;
+        border-bottom: 1rpx solid #f1f1f1;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 26rpx 0 20rpx;
+}
+.content .info .order_list .list .list_top .time{
+    color: #b4b4b4;
+}
+.content .info .order_list .list .list_top .state{
+    color: #81d6aa;
+}
+/* 单条订单  内容商品  样式 */
+.content .info .order_list .list_content {
+    height: 260rpx;
+    border-bottom: 1rpx solid #f1f1f1;
+    display: flex;
+    align-items: center;
+    padding-left: 40rpx;
+    padding-right: 20rpx;
+}
+.content .info .order_list .list_content .img{
+    width: 180rpx;
+    height: 160rpx;
+}
+.list_content_right .right_bot{
+        margin-top: 32rpx;
+        font-size: 24rpx;
+        color:  #b4b4b4;
+        display: flex;
+        justify-content: space-between;
+}
+/* 单条订单  底部  样式 */
+.content .info .list_foot{
+    height: 174rpx;
+    display: flex;
+    flex-direction: column;
+   align-items: flex-end;
+   box-sizing: border-box;
+   padding-top: 30rpx;
+   padding-right: 20rpx;
+}
+.content .info .foot{
+    height: 90rpx;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 20rpx;
+} 
+.content .info .list_foot .btn{
+    margin-top: 32rpx;
+    display: flex;
+}
+.content .info .list_foot .btn view{
+    width: 132rpx;
+    height: 54rpx;
+    border: 1rpx solid #000;
+    text-align: center;
+    line-height: 54rpx;
+}
+.content .info .list_foot .btn .buyNow{
+    background: #81d6aa;
+    color: #fff;
+    border: 1rpx solid #81d6aa;
+    margin: 0 14rpx 0 30rpx;
+}
+/*删除样式  */
+
+.remove{
+    position: absolute;
+    height: 442rpx;
+    width: 128rpx;
+    background:#81d6aa;
+    top: 0;
+    right: -128rpx;
+    line-height: 442rpx;
+    text-align: center;
+    color: #fff;
+}

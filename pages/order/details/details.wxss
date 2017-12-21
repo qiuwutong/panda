@@ -1,0 +1,146 @@
+/* pages/order/details/details.wxss */
+
+page {
+    font-size: 28rpx;
+    color: #262626;
+}
+
+.order_time {
+    height: 68rpx;
+}
+
+.order_number {
+    border-top: 1rpx solid #f1f1f1;
+    padding: 0rpx 28rpx 0 20rpx;
+    height: 88rpx;
+    background: #fff;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20rpx;
+}
+
+.address {
+    background: #fff;
+    height: 120rpx;
+    padding: 0 28rpx 0 22rpx;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20rpx;
+}
+
+.address .address_left {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.address .address_left .add {
+    color: #969696;
+}
+
+.address .phone {
+    padding-top: 24rpx;
+}
+
+/* 单条订单  内容商品  样式 */
+
+.info {
+    background: #fff;
+    margin-bottom: 20rpx;
+}
+
+.info .list_content {
+    height: 260rpx;
+    border-bottom: 1rpx solid #f1f1f1;
+    display: flex;
+    align-items: center;
+    padding-left: 40rpx;
+    padding-right: 20rpx;
+}
+
+.info .list_content .img {
+    width: 180rpx;
+    height: 160rpx;
+}
+
+.list_content_right .right_bot {
+    margin-top: 32rpx;
+    font-size: 24rpx;
+    color: #b4b4b4;
+    display: flex;
+    justify-content: space-between;
+}
+
+.info .info_bot {
+    display: flex;
+    flex-direction: column;
+}
+
+.info .info_bot .list {
+    padding: 0 20rpx 0 28rpx;
+    box-sizing: border-box;
+    height: 87rpx;
+    border-bottom: 1rpx solid #f1f1f1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/*  时间样式  */
+
+.time_info {
+    background-color: #fff;
+    padding: 26rpx 0 0 20rpx;
+    font-size: 26rpx;
+}
+
+.time_info>ul {
+    display: flex;
+    flex-direction: column;
+}
+
+.time_info .time {
+    padding-bottom: 26rpx;
+}
+
+.foot {
+    display: flex;
+    /* margin-bottom: 30rpx; */
+    height: 148rpx;
+    align-items: center;
+}
+
+.one {
+    display: flex;
+    height: 148rpx;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: 50rpx;
+}
+
+.one .express {
+    margin: 0;
+}
+
+.express, .confirm {
+    width: 278rpx;
+    height: 76rpx;
+    display: flex;
+    font-size: 30rpx;
+    padding: 0;
+    justify-content: center;
+}
+
+.express {
+    background: #fff;
+    border: 1rpx solid #262626;
+    color: #212121;
+}
+
+.confirm {
+    background: #81d6aa;
+    border: 1rpx solid #81d6aa;
+    color: #fff;
+}

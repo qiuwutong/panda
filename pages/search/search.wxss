@@ -1,0 +1,81 @@
+/* pages/search/search.wxss */
+
+/*顶部搜索  开始  */
+@import "../../template/wxss/goods.wxss";
+.top {
+    display: flex;
+    height: 80rpx;
+    background: #fbfafa;
+    border-bottom: 1px solid #969696;
+    padding: 0rpx 0rpx 20rpx 40rpx;
+}
+
+.top .search {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    background: #eeeeed;
+}
+
+.top .search text {
+    font-size: 42rpx;
+    font-weight: 900;
+    color: #969696;
+    margin: 0 20rpx;
+}
+
+.top .search input {
+    width: 100%;
+    font-size: 28rpx;
+}
+
+.top .return {
+    width: 140rpx;
+    line-height: 80rpx;
+    text-align: center;
+    font-weight: 500;
+}
+
+/*顶部搜索  结束 */
+
+/*热门搜索  开始  */
+
+.hot_search {
+    padding: 0 40rpx;
+}
+
+.hot_search .hot_title {
+    padding: 20rpx 0;
+    font-weight: 600;
+}
+
+.hot_search .hot_info {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.hot_search .hot_info li {
+    font-size: 28rpx;
+    height: 60rpx;
+    margin-right: 35rpx;
+    background: #f1f1f1;
+    padding: 0rpx 20rpx;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 26rpx;
+    font-weight: 600;
+}
+
+/*热门搜索  结束 */
+
+
+/*搜索商品列表   开始  */
+.content {
+    padding: 0 20rpx;
+    background: #fff;
+}
+.content .tel_Price{
+    font-size: 30rpx;
+}
+/*搜索商品列表   结束 */

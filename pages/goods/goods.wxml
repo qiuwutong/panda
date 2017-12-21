@@ -1,0 +1,123 @@
+<view class='{{model_show?"layout":""}}'>
+    <!--pages/goods/goods.wxml-->
+
+    <view class='swiper'>
+        <swiper circular="true" current="0" bindchange="swiperChange">
+            <block wx:for="{{swiper.imgUrls}}" wx:key="{{index}}">
+                <swiper-item>
+                    <image src="{{item}}" width="100%" height="690rpx" />
+                </swiper-item>
+            </block>
+        </swiper>
+        <!--控制点  -->
+        <view class="dots">
+            <block wx:for="{{swiper.imgUrls}}" wx:key="unique">
+                <view class="dot{{index == swiperCurrent ? ' active' : ''}}"></view>
+            </block>
+        </view>
+    </view>
+
+    <!--商品介绍  -->
+    <view class='header'>
+        <view class='title'>贝壳元素 冬装女童童装儿童加厚外套wt557</view>
+        <view class='text'>女童卫衣，简单舒适，孩子都喜爱</view>
+        <view class='price color'>￥83~120</view>
+    </view>
+
+
+    <!--选择列表  -->
+    <view class=' select'>
+        <!--第一列  -->
+        <view bindtap='model_showTap'>
+            规格数量选择
+            <view class='iconfont icon-gengduo1'></view>
+        </view>
+    </view>
+
+    <!--商品详情展示 开始 -->
+    <view class='info'>
+        <image src='../../images/sp@3x.png'></image>
+        <image src='../../images/sp@3x.png'></image>
+    </view>
+     <!--商品详情展示 开始 -->
+
+    <!--  底部导航-->
+    <view class='bt_nav'>
+        <view class='shoucang'>
+            <text class='iconfont icon-shoucang'  bindtap=''></text>
+            <text>收藏</text>
+        </view>
+        <view class='cart'>
+            <text class='iconfont icon-gouwuchekong'></text>
+            <text bindtap='carTap'>购物车</text>
+        </view>
+        <view class='jion_cart' bindtap='buyTap' data-buy="0">
+            加入购物车
+        </view>
+        <view class='buy' bindtap='buyTap' data-buy='1'>立即购买</view>
+    </view>
+
+
+    <!--选择商品        开始  -->
+    <view class='model' wx:if="{{model_show}}">
+        <view class='tel_info'>
+            <view class='close   iconfont icon-guanbi' bindtap='closeTap'></view>
+            <!--商品  -->
+            <block wx:for="{{details}}" wx:key="{{index}}">
+                <view class='details'>
+                    <view class='img'>
+                        <image src="{{item.img}}"></image>
+                    </view>
+                    <ul>
+                        <li class="price color">￥{{item.price}}</li>
+                        <li class="kuchun" wx:if='{{sel_color||sel_size}}'>
+                            <text>库存</text>
+                            <text>{{item.kuchun}}件</text>
+                        </li>
+                        <li wx:if='{{!sel_size&!sel_color}}'>请选择规格颜色</li>
+                        <li class="sel" wx:if='{{sel_size||sel_color}}'>
+                            <text>已选</text>
+                            <text class='color' wx:if='{{sel_size}}'>“{{sel_size}}”</text>
+                            <text  class='color'wx:if='{{sel_color}}'>“{{sel_color}}”</text>
+                        </li>
+                    </ul>
+                </view>
+
+                <!--商品规格  -->
+                <view class='size'>
+                    <text>规格</text>
+                    <ul class="box">
+                        <block wx:for="{{item.size}}" wx:key="{{index}}">
+                            <li bindtap='sizeTap' data-val="{{item}}" data-id="{{index}}" class="{{sizeid == index?'info_active':''}}">{{item}}</li>
+                        </block>
+                    </ul>
+                </view>
+
+                <!--商品颜色  -->
+                <view class='tel_color'>
+                    <text>颜色</text>
+                    <ul class="box">
+                        <block wx:for="{{item.color}}" wx:key="{{index}}">
+                            <li  bindtap='colorTap' data-val="{{item}}" data-id="{{index}}" class="{{colorid == index?'info_active':''}}">{{item}}</li>
+                        </block>
+                    </ul>
+                </view>
+            </block>
+            <!--商品数量  -->
+            <view class='number'>
+                <text class='num'>数量</text>
+                <view class='input'>
+                    <text bindtap='btnTap' data-id='left'>-</text>
+                    <text class='input_num'>{{detailNum}}</text>
+                    <text bindtap='btnTap' data-id='right'>+</text>
+                </view>
+            </view>
+
+            <view class='tel_foot'  wx:if="{{bottom_show}}">
+                <view bindtap='jionTap'>加入购物车</view>
+                <view bindtap='nowTap'>立即购买</view>
+            </view>
+            <view wx:else  class='tel_foot confirm'  bindtap='jionTap'>确认</view>
+        </view>
+    </view>
+</view>

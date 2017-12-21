@@ -1,0 +1,16 @@
+<!--pages/classify/classify/goods.wxml-->
+<import src="../../../template/wxml/goods.wxml" />
+<view class='content'>
+    <!--顶部导航  开始  -->
+    <scroll-view class='top_nav' scroll-x="true" style="width: 100%">
+        <block wx:for="{{navs}}" wx:key="{{idnex}}">
+            <view class='{{id==index?"active":""}}' bindtap='navtap' data-id="{{item.navid}}">{{item.name}}</view>
+        </block>
+    </scroll-view>
+    <!--顶部导航  结束 -->
+
+    <!--商品          -->
+    <view class='info'>
+        <template is="tel_goods" data="{{...classifygoods}}"></template>
+    </view>
+</view>

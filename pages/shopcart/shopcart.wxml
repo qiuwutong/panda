@@ -1,0 +1,135 @@
+<!--pages/shopcart/shopcart.wxml-->
+<import src="../../template/wxml/goods.wxml" />
+<view class='{{model_show?"layout":""}}'>
+    <view class='top'>
+        <view class='top_title'>购物车
+            <text wx:if="{{shopcartNum}}">({{shopcartNum}})</text>
+        </view>
+        <view class='top_right' wx:if="{{shopcartNum}}" bindtap='bianjiTap'>{{toptext}}</view>
+    </view>
+    <!--购物车没有商品的模板  -->
+    <view class='content' wx:if="{{!shopcartNum}}">
+        <view class='none'>
+            <view class='iconfont icon-gouwuchekong'></view>
+            <text class='text'>购物车还是空的哦</text>
+        </view>
+        <view class='more'>
+            <view class='title'>—更多推荐—</view>
+            <!--商品          -->
+            <view class='info'>
+                <template is="tel_goods" data="{{...moregoods}}"></template>
+            </view>
+        </view>
+    </view>
+    <!--购物车有商品的模板  -->
+    <view class='content'>
+
+        <view class='info'>
+            <!--商品  -->
+            <block wx:for="{{shopcart}}" wx:key="{{index}}">
+                <view class='selectList'>
+                    <!--商品单选按钮  -->
+                    <view class='select   iconfont wx:if="{{item.selected?"icon-xuanze":"icon-xuanze1"}}"' bindtap='select' data-index="{{index}}"></view>
+                    <!--商品图片-  -->
+                    <view class='img'>
+                        <image src='{{item.image}}'></image>
+                    </view>
+                    <!--商品详情  -->
+                    <view class='goods_info'>
+                        <view class='goods_title'>{{item.content}}</view>
+                        <view class='sel'>款式：
+                            <text>{{item.sel}}，</text>
+                            <text>{{item.color}}</text>
+                            <text class='iconfont  icon-down-trangle' wx:if="{{!flag}}" bindtap='model_showTap'  data-index='{{index}}'></text>
+                        </view>
+                        <view class='bottom'>
+                            <!--商品数量选择  -->
+                            <text class='price'>￥{{item.Price}}</text>
+                            <view class='num_input'>
+                                <text bindtap='numTap' data-id='left' data-index="{{index}}">-</text>
+                                <text class='num'>{{item.num}}</text>
+                                <text bindtap='numTap' data-id='right' data-index="{{index}}">+</text>
+                            </view>
+                        </view>
+                    </view>
+                </view>
+            </block>
+        </view>
+        <view class='foot' wx:if="{{shopcartNum}}">
+            <view class='left'>
+                <!--全选按钮  -->
+                <view class='select   iconfont wx:if="{{selectAll?"icon-xuanze":"icon-xuanze1"}}"' bindtap='selectAllTap'></view>
+                <text>全选</text>
+            </view>
+            <!--判断是否为编辑状态 flag -->
+            <view class='right' wx:if="{{flag}}">
+                <text>合计：</text>
+                <text class='total color' wx:if="{{total}}">￥{{total}}</text>
+                <text class='total color' wx:else>￥00.00</text>
+                <text class='buy'  bindtap='buyTap'>立即购买</text>
+            </view>
+            <!--编辑状态  -->
+            <view class='del  center' bindtap="delTap" wx:else>删除所选</view>
+        </view>
+    </view>
+
+    <!--选择商品        开始  -->
+    <view class='model' wx:if="{{model_show}}">
+        <view class='tel_info'>
+            <view class='close   iconfont icon-guanbi' bindtap='closeTap'></view>
+            <!--商品  -->
+            <block wx:for="{{details}}" wx:key="{{index}}">
+                <view class='details'>
+                    <view class='img'>
+                        <image src="{{item.img}}"></image>
+                    </view>
+                    <ul>
+                        <li class="price color">￥{{item.price}}</li>
+                        <li class="kuchun" wx:if='{{sel_color||sel_size}}'>
+                            <text>库存</text>
+                            <text>{{item.kuchun}}件</text>
+                        </li>
+                        <li wx:if='{{!sel_size&!sel_color}}'>请选择规格颜色</li>
+                        <li class="sel" wx:if='{{sel_size||sel_color}}'>
+                            <text>已选</text>
+                            <text class='color' wx:if='{{sel_size}}'>“{{sel_size}}”</text>
+                            <text class='color' wx:if='{{sel_color}}'>“{{sel_color}}”</text>
+                        </li>
+                    </ul>
+                </view>
+
+                <!--商品规格  -->
+                <view class='size'>
+                    <text>规格</text>
+                    <ul class="box">
+                        <block wx:for="{{item.size}}" wx:key="{{index}}">
+                            <li bindtap='sizeTap' data-val="{{item}}" data-id="{{index}}" class="{{sizeid == index?'info_active':''}}">{{item}}</li>
+                        </block>
+                    </ul>
+                </view>
+
+                <!--商品颜色  -->
+                <view class='tel_color'>
+                    <text>颜色</text>
+                    <ul class="box">
+                        <block wx:for="{{item.color}}" wx:key="{{index}}">
+                            <li bindtap='colorTap' data-val="{{item}}" data-id="{{index}}" class="{{colorid == index?'info_active':''}}">{{item}}</li>
+                        </block>
+                    </ul>
+                </view>
+            </block>
+            <!--商品数量  -->
+            <view class='number'>
+                <text class='num'>数量</text>
+                <view class='input'>
+                    <text bindtap='btnTap' data-id='left'>-</text>
+                    <text class='input_num'>{{detailNum}}</text>
+                    <text bindtap='btnTap' data-id='right'>+</text>
+                </view>
+            </view>
+
+
+            <view class='tel_foot confirm' bindtap='jionTap'>确认</view>
+        </view>
+    </view>
+</view>

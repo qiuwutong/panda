@@ -1,0 +1,38 @@
+/* pages/user/shoucang/shoucang.wxss */
+@import "../../../template/wxss/goods.wxss";
+page {
+    background: #fff;
+    border-top: 1rpx solid #969696;
+}
+/*没有商品样式  */
+.content .none{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.content .none .iconfont{
+    font-size:160rpx;
+    font-weight: 100;
+    color: #a5a5a5;
+    margin-top: 120rpx;
+}
+.content .none .title{
+    font-size: 32rpx;
+    color: #bdbdbd;
+    margin-top: 40rpx;
+}
+.content .none .btn{
+    margin-top: 92rpx;
+    font-size: 32rpx;
+    height: 68rpx;
+    width: 278rpx;
+    border: 1rpx solid #81d6aa;
+    border-radius: 8rpx;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/*商品样式  */
+.content_info{
+    padding-left: 38rpx;
+}

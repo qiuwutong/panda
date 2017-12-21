@@ -1,0 +1,13 @@
+<template name="tel_goods">
+    <view class='tel_goods'>
+        <block wx:for="{{info}}" wx:key="{{index}}">
+            <view>
+                <view class='tel_img'>
+                    <image src='{{item.image}}'></image>
+                </view>
+                <view class='tel_text'>{{item.content}}</view>
+                <view class='tel_Price'>￥{{item.Price}}</view>
+            </view>
+        </block>
+    </view>
+</template>

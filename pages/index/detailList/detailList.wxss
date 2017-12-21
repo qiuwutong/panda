@@ -1,0 +1,83 @@
+/* pages/index/detailList/detailList.wxss */
+page{
+    height: 100%;
+    width: 100%;
+    font-size: 28rpx;
+}
+image{
+    width: 100%;
+}
+/*轮播图样式  开始  */
+.swiper {
+    background: #fff;
+    position: relative;
+    border-top: 1px solid #ccc;
+    padding: 20rpx 0;
+}
+
+.swiper, .swiper swiper {
+    width: 100%;
+}
+
+swiper-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.swiper .dots {
+    position: absolute;
+    display: flex;
+    bottom: 38rpx;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+.swiper .dots .dot {
+    width: 14rpx;
+    height: 14rpx;
+    border-radius: 7rpx;
+    background: #dcdcdc;
+    margin-right: 16rpx;
+}
+
+.swiper .dots .active {
+    background: #fc0f4e;
+}
+/*轮播图样式  结束  */
+
+/* 商品列表详情 开始  */
+.info{  
+    margin-top: 20rpx;
+}
+.info .lists .list{
+    display: block;
+    padding: 20rpx ;
+    padding-bottom: 0;
+    background: #fff;
+    height: 540rpx;
+    margin-bottom: 20rpx;
+}
+.info .lists .list .img{
+    height: 300rpx;
+    vertical-align:top;
+    margin-bottom: 40rpx;
+}
+.info .lists .list .title{
+    font-size: 32rpx;
+    
+}
+.info .lists .list .list_foot{
+    display: flex;
+    align-items: center;
+    margin-top: 24rpx;
+    justify-content: space-between;
+}
+.info .lists .list .list_foot .buy{
+    width: 146rpx;
+    height: 54rpx;
+    font-size: 24rpx;
+    padding: 0;
+    background:  #81d6aa;
+    color: #fff;
+}

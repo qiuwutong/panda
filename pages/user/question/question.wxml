@@ -1,0 +1,26 @@
+<!--pages/user/question/question.wxml-->
+<view class='content'>
+    <view class='top'>
+        常见问题
+    </view>
+    <view class='info'>
+        <ul class="lists">
+            <li class="list" bindtap="answerTap">
+                <text>我的包裹多长时间能送到？</text>
+                <text class='iconfont icon-gengduo1'></text>
+            </li>
+            <li class="list">
+                <text>我的包裹多长时间能送到？</text>
+                <text class='iconfont icon-gengduo1'></text>
+            </li>
+            <li class="list">
+                <text>我的包裹多长时间能送到？</text>
+                <text class='iconfont icon-gengduo1'></text>
+            </li>
+            <li class="list">
+                <text>我的包裹多长时间能送到？</text>
+                <text class='iconfont icon-gengduo1'></text>
+            </li>
+        </ul>
+    </view>
+</view>

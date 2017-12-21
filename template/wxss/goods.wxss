@@ -1,0 +1,31 @@
+ .tel_goods {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.tel_goods .tel_img {
+    display: flex;
+    justify-content: center;
+    width: 345rpx;
+    margin-top: 50rpx;
+}
+
+.tel_goods .tel_img image {
+    width: 345rpx;
+    height: 345rpx;
+}
+
+.tel_goods .tel_text {
+    width: 298rpx;
+    font-size: 24rpx;
+    color: #363636;
+    font-weight: 600;
+    margin: 20rpx 0;
+}
+
+.tel_goods .tel_Price {
+    color: #81d6aa;
+    font-weight: 600;
+    font-size: 24rpx;
+}

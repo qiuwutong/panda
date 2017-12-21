@@ -1,0 +1,43 @@
+<!--pages/order/confirm/confirm.wxml-->
+<import src="../../../template/wxml/goods.wxml" />
+<!--支付成功   交易成功  -->
+<view class='confirm' wx:if="{{code == 1}}">
+    <icon type='success' size='88' color='#81d6aa'></icon>
+    <view class='title color'>{{title}}！</view>
+    <view class='btn'>
+        <botton class='order' bindtap="lookTap">查看订单</botton>
+        <botton class='return color' bindtap='returnTap'>返回首页</botton>
+    </view>
+</view>
+
+<!--支付失败  -->
+<view class='confirm_top' wx:elif="{{code == 0}}">
+    <view class='fail color'>支付失败</view>
+    <view class='title'>
+        <view>请在
+            <text class='time'>12小时</text>内完成付款</view>
+        <view>否则订单会被系统取消 </view>
+    </view>
+    <view class='btn'>
+        <botton class='order' bindtap="lookTap">查看订单</botton>
+        <botton class='return color' bindtap='returnTap'>重新付款</botton>
+    </view>
+</view>
+<view class='address' wx:if="{{code == 0}}">
+    <view>
+        <ul class='add_left'>
+            <li>韩梅梅</li>
+            <li class="add">广东省广州市白云区石槎路396号</li>
+            <li>需要支付： <text class='color'>￥1054.80</text> </li>
+        </ul>
+    </view>
+    <view class='add_right'>15222233345</view>
+</view>
+
+<view class='more'>
+    <view class='title'>—更多推荐—</view>
+    <!--商品          -->
+    <view class='info'>
+        <template is="tel_goods" data="{{...moregoods}}"></template>
+    </view>
+</view>

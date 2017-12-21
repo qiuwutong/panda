@@ -1,0 +1,26 @@
+<template name="home_goods">
+    <view>
+        <scroll-view scroll-x="true">
+            <view class='home_info'>
+                <block wx:for="{{info}}" wx:key="{{index}}">
+                    <view class='home_info_li' bindtap='goodsTap'>
+                        <view class='home_info_img'>
+                            <image src='{{item.image}}'></image>
+                        </view>
+                        <view class='content'>{{item.content}}</view>
+                        <view class='Price'>
+                            <view class='hot'>￥{{item.hot}}</view>
+                            <view class='original'>￥{{item.original}}</view>
+                        </view>
+                    </view>
+                </block>
+                <view bindtap='moreTap'>
+                    <view class='gengduo'>
+                        <text class='color'>查看全部</text>
+                        <text class='more'>See more</text>
+                    </view>
+                </view>
+            </view>
+        </scroll-view>
+    </view>
+</template>

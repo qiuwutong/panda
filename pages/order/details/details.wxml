@@ -1,0 +1,93 @@
+<!--pages/order/details/details.wxml-->
+<view class='content'>
+    <!--支付剩余时间  -->
+    <view class='order_time center color' wx:if="{{code == 1}}">
+        <text>支付剩余时间：11小时14分58秒</text>
+    </view>
+    <!--订单号  -->
+    <view class='order_number'>
+        <text>订单号：3545464643543188</text>
+        <text class='order_code color'>待付款</text>
+    </view>
+
+    <!--地址  -->
+    <view class='address'>
+        <view class='address_left'>
+            <text>韩梅梅</text>
+            <text class='add'>广东省广州市白云区石槎路396号</text>
+        </view>
+        <text class='phone'>15522233345</text>
+    </view>
+
+    <!--订单商品详情  -->
+    <view class='info'>
+        <ul class="list_content">
+            <li>
+                <image src='../../../images/Figure4.png' class='img'></image>
+            </li>
+            <li class="list_content_right">
+                <view class='right_top'>
+                    是打发叫对方拉科技的发卡机待付款垃圾分类快捷
+                </view>
+                <view>
+                    款式:XS，香槟金
+                </view>
+                <view class='right_bot'>
+                    <text class='color'>￥:999.00</text>
+                    <text>x3</text>
+                </view>
+            </li>
+        </ul>
+        <ul class="list_content">
+            <li>
+                <image src='../../../images/Figure4.png' class='img'></image>
+            </li>
+            <li class="list_content_right">
+                <view class='right_top'>
+                    是打发叫对方拉科技的发卡机待付款垃圾分类快捷
+                </view>
+                <view>
+                    款式:XS，香槟金
+                </view>
+                <view class='right_bot'>
+                    <text class='color'>￥:999.00</text>
+                    <text>x3</text>
+                </view>
+            </li>
+        </ul>
+        <view>
+            <ul class="info_bot">
+                <li class="list">
+                    <text>运费</text>
+                    <text class='color'>￥5.00</text>
+                </li>
+                <li class="list">
+                    <text>优惠券</text>
+                    <text>-￥10.00</text>
+                </li>
+                <li class="list">
+                    <text>合计</text>
+                    <text class='color'>￥1055.00</text>
+                </li>
+            </ul>
+            
+        </view>
+    </view>
+
+    <!--创建时间  -->
+    <view class='time_info'>
+        <ul>
+            <li class="time">
+                创建时间：2016-11-20 16:25:2
+            </li>
+        </ul>
+    </view>
+    <!--  底部按钮  -->
+    <view class='foot' wx:if="{{code == 1}}">
+        <button class='express'>查看物流</button>
+        <button class='confirm'>确认收货</button>
+    </view>
+    <view class='one' wx:wlse>
+        <button class='express'>取消订单</button>
+    </view>
+</view>

@@ -1,0 +1,86 @@
+/* pages/order/confirm/confirm.wxss */
+@import "../../../template/wxss/goods.wxss";
+
+.confirm {
+    /*支付成功  交易成功样式  */
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background: #fff;
+    border-top: 1rpx solid #f1f1f1;
+    height: 562rpx;
+    box-sizing: border-box;
+    font-size: 32rpx;
+    padding-top: 93rpx;
+}
+.confirm .title {
+    margin: 35rpx 0 95rpx;
+}
+
+.confirm_top {
+    /*支付失败样式  */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #fff;
+    border-top: 1rpx solid #f1f1f1;
+    height: 346rpx;
+    box-sizing: border-box;
+    font-size: 32rpx;
+    padding-top: 44rpx;
+}
+
+.confirm_top .title{
+    margin: 34rpx 0 50rpx;
+    font-size: 28rpx;
+}
+.confirm_top .btn botton, 
+.confirm .btn botton {
+    display: inline-block;
+    width: 278rpx;
+    height: 68rpx;
+    border: 1rpx solid #000;
+    text-align: center;
+    line-height: 68rpx;
+}
+.confirm_top .btn .return,
+.confirm .btn .return{
+  border: 1rpx solid #81d6aa;
+  margin-left: 26rpx;
+}
+/*支付失败详情  */
+.address{
+    padding-left: 20rpx;
+    margin-top: 20rpx;
+    display: flex;
+    justify-content: space-between;
+    height: 194rpx;
+    background: #fff;
+    font-size: 30rpx;
+}
+.address .add_left{
+    height: 194rpx;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.address .add_left .add{
+        font-size: 28rpx;
+        color: #969696;
+}
+.address .add_right{
+    margin: 32rpx 50rpx 0 0 ;
+}
+/*更多推荐  */
+.more {
+    margin-top: 20rpx;
+    background: #fff;
+  
+}
+.more .title{
+   padding-top: 42rpx;
+      text-align: center; 
+}
+.more .info{
+    padding-left: 20rpx;
+}

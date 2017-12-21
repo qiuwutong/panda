@@ -1,0 +1,35 @@
+<!--pages/order/express/express.wxml-->
+<view class='express'>
+    <view class='top'>
+        <view>物流信息：{{express.company}} </view>
+        <view>物流单号：{{express.number}}</view>
+    </view>
+
+
+    <view class='info'>
+        <view class='info_title'>订单跟踪</view>
+        <view>
+            <ul class='list'>
+                <li class="dian"></li>
+                <li class="xian"></li>
+                <li class="list_title">物流信息</li>
+                <li class="content">物流信息物流信息物流信息物流信息物流信息物流信息物流信息物流信息</li>
+                <li class="time">2017-10-08 11：22：33</li>
+            </ul>
+            <ul class='list'>
+                <li class="dian"></li>
+                <li class="xian"></li>
+                <li class="list_title">物流信息</li>
+                <li class="content">物流信息物流信息物流信息物流信息物流信息物流信息物流信息物流信息</li>
+                <li class="time">2017-10-08 11：22：33</li>
+            </ul>
+            <ul class='list'>
+                <li class="dian"></li>
+                <li class="xian"></li>
+                <li class="list_title">物流信息</li>
+                <li class="content">物流信息物流信息物流信息物流信息物流信息物流信息物流信息物流信息</li>
+                <li class="time">2017-10-08 11：22：33</li>
+            </ul>
+        </view>
+    </view>
+</view>

@@ -1,0 +1,94 @@
+<!--index.wxml-->
+<import src="../../template/wxml/home_goods.wxml" />
+<import src="../../template/wxml/goods.wxml" />
+<view class="container">
+    <!--搜索模块  -->
+    <view class='top'>
+        <view class='search'   bindtap='searchtap'>
+            <text class='iconfont icon-search1'></text>
+            <input type='text' placeholder="请输入关键字" />
+        </view>
+        <view></view>
+    </view>
+    <!--轮播图  -->
+    <view class='swiper'>
+        <swiper  circular="true" autoplay='true' interval="3000" current="0" bindchange="swiperChange">
+            <block wx:for="{{swiper.imgUrls}}" wx:key="{{index}}">
+                <swiper-item>
+                    <image src="{{item}}" class="slide-image" width="100%" height="300rpx" />
+                </swiper-item>
+            </block>
+        </swiper>
+        <!--控制点  -->
+        <view class="dots">
+            <block wx:for="{{swiper.imgUrls}}" wx:key="unique">
+                <view class="dot{{index == swiperCurrent ? ' active' : ''}}"></view>
+            </block>
+        </view>
+    </view>
+
+    <!--分类列表  -->
+    <view class='classify'>
+        <view class='classify-img' bindtap='classifyTap'>
+            <image src='../../images/Delicious food.png'></image>
+            <view class='classify-text'>美食</view>
+        </view>
+        <view class='classify-img' bindtap='classifyTap'>
+            <image src='../../images/baby.png'></image>
+            <view class='classify-text'>母婴</view>
+        </view>
+        <view class='classify-img' bindtap='classifyTap'>
+            <image src='../../images/Beauty.png'></image>
+            <view class='classify-text'>美妆</view>
+        </view>
+        <view class='classify-img' bindtap='classifyTap'>
+            <image src='../../images/Healthy life.png'></image>
+            <view class='classify-text'>键康生活</view>
+        </view>
+    </view>
+
+    
+    <!--  新品速递 开始-->
+    <view class='newgoods'>
+        <view class='title'>— 新品速递 —</view>
+        <view class='banner' bindtap='moreTap'>
+            <image src="../../images/Figure2.png"></image>
+        </view>
+        <!--新品速递 商品 开始  -->
+        <view class='newgoods_info'>
+            <template is="home_goods" data="{{...newgoods}}"></template>
+        </view>
+        <!--新品速递 商品 结束  -->
+        <!-- newgoods -->
+    </view>
+
+
+    <!--  人气热销 开始-->
+    <view class='newgoods' bindtap='moreTap'>
+        <view class='title'>— 人气热销 —</view>
+        <view class='banner'>
+            <image src="../../images/Figure2.png"></image>
+        </view>
+        <!--人气热销 商品 开始  -->
+        <view class='newgoods_info'>
+            <template is="home_goods" data="{{...newgoods}}"></template>
+        </view>
+        <!--人气热销 商品 结束  -->
+        <!-- newgoods -->
+    </view>
+
+    <!--为你精选  -->
+    <view class='selected'>
+        <view class='title'>为你精选</view>
+        <template is="tel_goods" data="{{...sel_goods}}"></template>
+        <!--selected  -->
+    </view>
+    <!--container  -->
+</view>
+
+<view class='load_box'>
+    <view class="weui-loadmore" hidden="{{isHideLoadMore}}">
+        <view class="weui-loading"></view>
+        <view class="weui-loadmore__tips">加载中...............</view>
+    </view>
+</view>

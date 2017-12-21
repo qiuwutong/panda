@@ -1,0 +1,16 @@
+/* pages/user/answer/answer.wxss */
+page{
+background: #fff;
+}
+.content{
+    border-top: 1rpx  solid #969696;
+    padding:0 20rpx;
+    font-size: 28rpx;
+    color: #212121;
+}
+.header{
+    margin:40rpx 0 30rpx 0; 
+}
+.answer{
+    color: #7e7e7e;
+}

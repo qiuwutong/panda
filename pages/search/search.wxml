@@ -1,0 +1,23 @@
+<!--pages/search/search.wxml-->
+<import src="../../template/wxml/goods.wxml" />
+<view class='top'>
+    <view class='search'>
+        <text class='iconfont .icon-search1'></text>
+        <input type='text' placeholder="请输入关键字" focus="true" confirm-type="done" bindsubmit="searching" />
+    </view>
+    <text class='return'>取消</text>
+</view>
+<!-- <view class='hot_search' wx:if="{{show}}">
+    <view class='hot_title'>热门搜索</view>
+    <ul class='hot_info'>
+        <li>国庆中秋</li>
+        <li>奶粉</li>
+        <li>保温杯</li>
+        <li>兰蒄口红</li>
+        <li>耳机</li>
+        <li>swisse钙片</li>
+    </ul>
+</view> -->
+<view class='content' wx:if="{{show}}">
+    <template is="tel_goods" data="{{...searchgoods}}"></template>
+</view>

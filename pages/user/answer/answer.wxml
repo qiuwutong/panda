@@ -1,0 +1,7 @@
+<!--pages/user/answer/answer.wxml-->
+<view class='content'>
+    <view class='header'>问：实物与图片有色差吗？</view>
+    <view>
+        <text class='answer'>答：所有的商品照片均以实物拍摄，颜色经设计师校对，由于不同的电脑显示，光纤，亮度都有差异，造成轻微色差难以避免。</text>
+    </view>
+</view>

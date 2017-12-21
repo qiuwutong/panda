@@ -1,0 +1,59 @@
+
+/* home_goods模板样式开始  */
+
+.home_info {
+    display: flex;
+}
+.home_info .home_info_li {
+    margin-right: 20rpx;
+}
+
+
+.home_info .home_info_li .home_info_img{
+    width: 190rpx;
+    height: 188rpx;
+}
+
+.home_info .home_info_li  .content {
+    font-size: 24rpx;
+    color: #212121;
+    font-weight: 900;
+    width: 170rpx;
+}
+
+.home_info .home_info_li  .Price {
+    display: flex;
+    padding: 40rpx 0;
+}
+
+.home_info .home_info_li .Price .hot {
+    font-size: 26rpx;
+    color: #81d6aa;
+    font-weight: 600;
+}
+
+.home_info .home_info_li .Price .original {
+    font-size: 24rpx;
+    color: #969696;
+    font-weight: 600;
+    margin-left: 20rpx;
+    text-decoration: line-through;
+}
+.gengduo{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 260rpx;
+    border: 1rpx solid #969696;
+    box-sizing: border-box;
+    margin-right: 20rpx;
+    border-radius: 5rpx;
+}
+.gengduo .more {
+    border-top: 2rpx solid #969696;
+    margin-top: 6rpx;
+    padding-top: 4rpx;
+}
+/* home_goods模板样式结束 */
